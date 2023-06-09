@@ -1,0 +1,653 @@
+.stream {
+  margin-top: 20px;
+  display: flex;
+  padding-left: 5rem;
+  transition: .5s ease-in-out;
+  flex-direction: column;
+}
+
+.airing-extra-info {
+  margin-top: 50px;
+  max-width: 800px;
+}
+
+.airing-extra-info h2 {
+  background-color: rgb(22, 32, 50);
+  padding: 20px;
+  border-radius: 9px;
+}
+
+.stream-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+}
+
+.video-title {
+  padding: 10px 10px;
+  max-width: 70%;
+}
+
+.video-title>p {
+  color: rgb(129, 174, 220);
+  width: 80%;
+}
+
+.video-title>span {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.video-player-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.video-player {
+  max-height: 400px;
+  max-width: 800px;
+}
+.playerchange-div{
+  max-width: 700px;
+  background: rgb(51, 51, 154);
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.playerchange-div i{
+  cursor: pointer;
+}
+.video-player iframe,
+.skeleton-loader-video {
+  height: 410px;
+  width: 700px;
+  /* background: red; */
+  border-radius: 10px;
+}
+
+.list-box {
+  width: 90%;
+}
+
+
+.episode-list {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  max-width: 800px;
+  max-height: 450px;
+  background-color: rgb(18, 26, 40);
+  padding: 10px 10px 10px;
+  border-radius: 14px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.episode-list button,
+.episode-skeleton {
+  width: 50px;
+  padding: 10px;
+  margin: 10px 8px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgb(51, 51, 154);
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-download {
+  background-color: rgb(51, 51, 154);
+  border-radius: 6px;
+  padding: 10px;
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.episode-list>a>button.active {
+  background: transparent;
+  outline: 3px solid rgb(51, 51, 154);
+  color: rgb(51, 51, 154);
+}
+
+.characters-container {
+  padding-top: 60px;
+  flex-wrap: wrap;
+  max-width: 790px;
+}
+
+.character p {
+  display: flex;
+  text-align: center;
+}
+
+.characters-container .characters-heading h2 {
+  font-size: 30px;
+  padding-bottom: 40px;
+}
+
+.characters::-webkit-scrollbar {
+  display: none;
+}
+
+.characters {
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+  cursor: pointer;
+}
+
+.characters-container img,
+.skeleton-character {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.previous-seasons {
+  display: flex;
+  max-width: 800px;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  max-height: 150px;
+  overflow-y: scroll;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.previous-seasons .related-seasons .image-related {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  position: relative;
+  filter: brightness(70%);
+}
+
+
+.previous-seasons .related-seasons .image-related::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.65);
+  ;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.previous-seasons::-webkit-scrollbar {
+  display: none;
+}
+
+.title-and-type {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-and-type h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  align-items: center;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media(max-width:1196px) {
+  .stream {
+    padding: 20px 0px;
+  }
+
+  .list-box {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width:1400px) {
+  .stream {
+    padding: 20px 30px;
+    padding-bottom: 300px;
+  }
+
+  .stream-container {
+    width: 100%;
+  }
+
+  .video-player iframe,
+  .skeleton-loader-video,
+  .playerchange-div {
+    width: 700px;
+  }
+
+  .list-box {
+    margin-right: 3%;
+  }
+
+  .episode-list {
+    max-width: 600px;
+    max-height: 400px;
+    padding-bottom: 20px;
+  }
+
+  .episode-list>a>button {
+    min-width: 50px;
+    max-width: 70px;
+    padding: 10px;
+    margin: 8px 5px;
+  }
+}
+
+@media(max-width: 1220px) {
+  .stream {
+    padding: 25px 30px;
+  }
+
+  .stream-container {
+    width: 100%;
+  }
+
+  .video-player iframe
+  ,  .skeleton-loader-video ,
+  .playerchange-div{
+    width: 650px;
+  }
+
+  .episode-list {
+    width: 100%;
+    max-height: 350px;
+  }
+
+  .episode-list>a>button {
+    min-width: 50px;
+    max-width: 70px;
+    padding: 10px;
+    margin: 8px 5px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .stream {
+    padding: 10px 20px;
+  }
+
+  .stream-container {
+    width: 100%;
+  }
+
+  .video-player iframe,
+  .skeleton-loader-video,
+  .playerchange-div {
+    width: 600px;
+  }
+
+  .episode-list {
+    max-width: 500px;
+    max-height: 350px;
+    margin-left: 20px;
+  }
+
+  .episode-list>a>button {
+    min-width: 50px;
+    max-width: 70px;
+    padding: 10px;
+    margin: 8px 5px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .video-player-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-player {
+    width: 100%;
+    padding-bottom: 0%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .video-player iframe ,
+  .skeleton-loader-video,
+  .playerchange-div{
+    width: 700px;
+  }
+
+  .list-box {
+    width: 100%;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+  }
+
+  .episode-list {
+    max-width: 800px;
+    width: 700px;
+    max-height: 400px;
+    /* padding: 20px 30px; */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .episode-list>a>button {
+    width: 45px;
+    padding: 8px;
+    margin: 8px 5px;
+  }
+
+  .video-title {
+    max-width: 90%;
+    padding-left: 10%;
+  }
+
+  .video-title p {
+    width: 100%;
+  }
+  .playerchange-div{
+    margin: auto;
+    width: 700px;
+  }
+
+}
+@media(max-width:730px){
+  .playerchange-div{
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media(max-width:900px) {
+  .video-title {
+    padding-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .video-player iframe,
+  .skeleton-loader-video {
+    height: 290px;
+  }
+}
+@media(max-width:800px){
+  .skeleton-loader-video{
+    max-width: 650px;
+  }
+}
+@media(max-width:700px) {
+  .previous-seasons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list-box {
+    margin-top: 15%;
+  }
+  .video-title {
+    padding: 10px 0;
+    border-radius: 0 0 12px 12px;
+    max-width: 100%;
+  }
+
+  .video-title>p {
+    color: rgb(129, 174, 220);
+    margin-bottom: 15px;
+    width: 600px;
+  }
+
+  .video-title>span {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+}
+@media(max-width:680px){
+  .skeleton-loader-video{
+    max-width: 500px;
+    max-height: 350px;
+  }
+}
+@media(max-width:550px) {
+  .video-player {
+    width: 100%;
+    padding-bottom:15%;
+    display: flex;
+    justify-content: center;
+  }
+  .list-box {
+    margin-top: 45%;
+  }
+
+  .video-title {
+    padding: 10px 0;
+    border-radius: 0 0 12px 12px;
+    max-width: 100%;
+  }
+
+  .video-title>p {
+    color: rgb(129, 174, 220);
+    margin-bottom: 15px;
+    width: 350px;
+    font-size: 12px;
+  }
+
+  .video-title>span {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+}
+
+@media(max-width:575px) {
+  .previous-seasons .related-seasons .image-related {
+    width: 120px;
+    height: 100px;
+  }
+.video-player iframe,
+.skeleton-loader-video{
+  height: 300px;
+}
+  .stream {
+    margin-top: 20px;
+    display: flex;
+    margin: auto;
+    transition: .5s ease-in-out;
+  }
+
+  .list-box {
+    margin-top: 0%;
+  }
+
+  .video-title {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    border-radius: 0 0 12px 12px;
+    max-width: 95%;
+  }
+
+  .video-title>p {
+    color: rgb(129, 174, 220);
+    margin-bottom: 15px;
+    width: 350px;
+    font-size: 12px;
+  }
+
+  .video-title>span {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+}
+
+@media(max-width:420px) {
+  .video-title p {
+    width: 320px;
+  }
+  .video-player iframe,
+  .skeleton-loader-video{
+    height: 220px;
+  }
+  @media(max-width:800px){
+    .skeleton-loader-video{
+      max-width: 350px;
+      max-height: 250px;
+    }
+  }
+}
+
+@media(max-width:365px) {
+  .video-title p {
+    width: 290px;
+  }
+
+  .video-title span {
+    font-size: 21px;
+  }
+}
+
+/* comments */
+.comments {
+  padding-top: 120px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.comments-header {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.send-comment {
+  padding: 10px;
+}
+
+.send-comment textarea {
+  width: 100%;
+  margin: 10px 0;
+  height: 90px;
+  background: rgb(22, 32, 50);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.send-comment button {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  background: rgb(51, 51, 154);
+  color: #fff;
+}
+
+.like-active {
+  color: rgb(33, 150, 243);
+}
+
+.comment-field {
+  padding: 10px;
+  overflow-y: scroll;
+  height: 800px;
+  padding-bottom: 50px;
+}
+
+.comment-field::-webkit-scrollbar {
+  width: 3px;
+}
+
+.user-comment {
+  display: flex;
+  margin: 12px 0;
+}
+
+.user-img img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.user-name-time-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name-time {
+  padding: 0 10px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.user-name-time .user-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.reply-like-replies {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.reply-like-replies button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+
+}
+
+/* reply textarea */
+.hide {
+  display: none;
+}
+
+.reply-textarea textarea {
+  width: 100%;
+  height: 90px;
+  padding: 10px;
+  background-color: rgb(22, 32, 50);
+  border-radius: 10px;
+  border: none;
+  margin: 10px 0;
+  color: white;
+  outline: none;
+  resize: none;
+}
+
+.reply-textarea button {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  background: rgb(51, 51, 154);
+  color: #fff;
+}
+
+@media (max-width: 1100px) {
+  .comments {
+    margin: auto;
+    width: 100%;
+  }
+}
